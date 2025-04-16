@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_color">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="21dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/back_button_text" />
+
+    <Button
+        android:id="@+id/btn_edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_profile"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btn_change_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/change_password"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfileActivity">
+
+    <!-- Top bar with back and edit button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <!-- Back button -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/backbutton" />
+
+        <!-- Edit button (aligned to right) -->
+
+        <ImageView
+            android:id="@+id/editButton"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="300dp"
+            android:src="@drawable/editbutton" />
+    </LinearLayout>
+
+    <!-- Profile info layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <!-- Profile picture -->
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/lisa2" />
+
+        <!-- Name and program details -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <!-- Name -->
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lisa Manoban"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold" />
+
+            <!-- Program and year -->
+            <TextView
+                android:id="@+id/courseYearTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="BSIT - 3rd Year"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="Student Information"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/phone1" />
+
+            <TextView
+                android:id="@+id/phoneTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:text="+63-5222-156"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/studentnumber" />
+
+            <TextView
+                android:id="@+id/studentIdTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:text="23-5555-333"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <!-- Upcoming Events/Reminders Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:text="Upcoming Events / Reminders"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="140dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/event1TextView"
+                    android:layout_width="170dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/buttons"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Exam:\nComputer Programming\nOctober 20, 2025"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/event2TextView"
+                    android:layout_width="170dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/buttons"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:text="Submission:\nProject Proposal\nOct 25, 2025"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <!-- Add more event TextViews here -->
+                <TextView
+                    android:id="@+id/event3TextView"
+                    android:layout_width="170dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/buttons"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:text="Presentation:\nSoftware Project\nNovember 5, 2025"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/event4TextView"
+                    android:layout_width="170dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/buttons"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:text="Assignment Due:\nCloud Computing\nNov 12, 2025"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Class Schedule Overview Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:text="Class Schedule Overview"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/schedule1TextView"
+                    android:layout_width="170dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/buttons"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:text="Database Systems\nMWF 9:00 AM - 10:30 AM"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/schedule2TextView"
+                    android:layout_width="170dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/buttons"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:text="Web Development\nTTh 1:00 PM - 2:30 PM"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <!-- Add more class schedule TextViews here -->
+                <TextView
+                    android:id="@+id/schedule3TextView"
+                    android:layout_width="170dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/buttons"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:text="Mobile App Development\nTTh 10:00 AM - 11:30 AM"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/schedule4TextView"
+                    android:layout_width="170dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/buttons"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:text="Network Security\nMW 2:00 PM - 3:30 PM"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</LinearLayout>

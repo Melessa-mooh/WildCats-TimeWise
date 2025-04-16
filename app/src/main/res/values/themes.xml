@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.WildcatsTimeWise" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Ensure the app doesn't use the default action bar -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

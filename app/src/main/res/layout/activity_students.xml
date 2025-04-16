@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    tools:context=".StudentsActivity"
+    android:padding="16dp">
+
+    <!-- Top Section: Events | Time | Profile -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/textView_event"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#D1C2C2"
+            android:text="@string/wildcats_event"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:text="--:--" />
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profile"
+            android:contentDescription="User Profile"/>
+    </LinearLayout>
+
+    <!-- Date Today -->
+    <TextView
+        android:id="@+id/date_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date_today"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="8dp"/>
+
+    <!-- Event Input Field -->
+    <EditText
+        android:id="@+id/et_new_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter new event"
+        android:inputType="text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:background="@android:color/white"
+        android:importantForAutofill="yes"
+        android:minHeight="48dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Add Event Button -->
+    <Button
+        android:id="@+id/btn_add_event"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Add Event"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"/>
+
+    <!-- Scrollable List for Events -->
+    <ListView
+        android:id="@+id/listView_events"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:padding="8dp" />
+
+    <!-- Dashboard Button -->
+    <Button
+        android:id="@+id/btn_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="@string/dashboard"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"
+        android:layout_marginTop="12dp"/>
+</LinearLayout>

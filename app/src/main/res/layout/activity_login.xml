@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#380c0f"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+    <!-- Title -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="App Logo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/wt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:text="@string/login_title"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:background="@drawable/custom_button"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Email Input -->
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:autofillHints="emailAddress"
+            android:backgroundTint="@android:color/white"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/background_color"
+            android:textSize="18sp" />
+
+        <!-- Password Input -->
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:autofillHints="password"
+            android:backgroundTint="@android:color/white"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/background_color" />
+
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#380C0F"
+            android:paddingBottom="10dp"
+            android:text="@string/sign_in"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+
+        <!-- Create Account Label -->
+        <TextView
+            android:id="@+id/tv_create_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:text="Don't have an account?"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <!-- Create Account Button -->
+        <Button
+            android:id="@+id/button_register"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="#380C0F"
+            android:contentDescription="Create an account button"
+            android:padding="15dp"
+            android:text="@string/create_account"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
