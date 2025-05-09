@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".AboutDevelopersActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/aboutDevToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/crimson"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@android:color/white"
+        app:title="About Developers"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/developersContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/white_solid">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                android:backgroundTint="@color/fade_white"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white_solid">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="@drawable/white_solid"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/dev1ImageView"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="Developer 1 Picture"
+                            android:scaleType="centerCrop"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                            app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/dev1NameTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            tools:text="Chris Daniel Cabataña"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/dev1CourseYearTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:textAppearance="?attr/textAppearanceSubtitle2"
+                            tools:text="BS Information Technology - 2rd Year" />
+
+                        <TextView
+                            android:id="@+id/dev1BioTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:lineSpacingMultiplier="1.2"
+                            android:textColor="@color/black"
+                            tools:text="Developer 1 biography goes here..." />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp"
+                android:backgroundTint="@color/fade_white"
+                android:background="@drawable/white_solid">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@drawable/white_solid"
+                        android:layout_gravity="center_vertical">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/dev2ImageView"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginEnd="16dp"
+                            android:contentDescription="Developer 2 Picture"
+                            android:scaleType="centerCrop"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                            app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+                        <TextView
+                            android:id="@+id/dev2NameTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textColor="@color/black"
+                            tools:text="Ma. Melessa V. Cabasag"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <TextView
+                            android:id="@+id/dev2CourseYearTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?attr/textAppearanceSubtitle2"
+                            android:textColor="@color/black"
+                            tools:text="BS Information Technology - 2nd Year" />
+
+                        <TextView
+                            android:id="@+id/dev2BioTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:lineSpacingMultiplier="1.2"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            tools:text="Developer 2 biography goes here..." />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

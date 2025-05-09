@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="400dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp"
+    tools:context=".MenuFragment">
+
+    <LinearLayout
+        android:id="@+id/menuProfileSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/white_solid">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/menuProfileImageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@android:drawable/sym_def_app_icon"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+            app:strokeColor="?attr/colorPrimary"
+            app:strokeWidth="1dp"
+            android:contentDescription="Profile Picture" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/menuUserNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textAppearance="?attr/textAppearanceTitleMedium"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+
+            tools:text="User Name" />
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/menuAboutAppTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About the App"
+        android:paddingVertical="12dp"
+
+        android:textColor="@color/black"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:clickable="true"
+        android:textSize="12sp"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:drawablePadding="16dp"
+        app:drawableStartCompat="@android:drawable/ic_menu_info_details"
+        app:drawableTint="?attr/colorControlNormal"
+        android:background="@drawable/white_solid"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/menuAboutDevTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Developers"
+        android:paddingVertical="12dp"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:clickable="true"
+        android:textSize="12sp"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:drawablePadding="16dp"
+        app:drawableStartCompat="@android:drawable/ic_menu_help"
+        app:drawableTint="?attr/colorControlNormal"
+        android:background="@drawable/white_solid"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/menuLogoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:paddingVertical="12dp"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:textColor="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="12sp"
+        android:gravity="center_horizontal"
+        android:drawablePadding="16dp"
+
+        app:drawableTint="?attr/colorError"
+        android:background="@drawable/redtenradius"/>
+
+</LinearLayout>

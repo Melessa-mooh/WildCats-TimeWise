@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_dashboard_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardPage"
+    android:background="@color/white">
+
+    <View
+    android:id="@+id/calendar_bg_view"
+    android:layout_width="0dp"
+    android:layout_height="350dp"
+    android:background="@drawable/filled_rectangle"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/current_day"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="332dp"
+        android:background="@drawable/white_stroke_rec"
+        android:gravity="center"
+        android:text="30"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/calendar_bg_view"
+        app:layout_constraintTop_toTopOf="@id/calendar_bg_view" />
+
+    <TextView
+        android:id="@+id/current_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/current_day"
+        app:layout_constraintEnd_toEndOf="@id/calendar_bg_view"
+        app:layout_constraintHorizontal_bias="0.896"
+        app:layout_constraintStart_toStartOf="@id/calendar_bg_view"
+        app:layout_constraintTop_toTopOf="@+id/current_day"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="2025" />
+
+    <TextView
+        android:id="@id/current_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/current_day"
+        app:layout_constraintEnd_toEndOf="@id/calendar_bg_view"
+        app:layout_constraintStart_toStartOf="@id/calendar_bg_view"
+        app:layout_constraintTop_toTopOf="@+id/current_day"
+        tools:text="MARCH" />
+
+    <com.example.wildcatstimewise.SimpleCalendar
+        android:id="@+id/square_day"
+        android:layout_width="0dp"
+        android:layout_height="320dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="10dp"
+        android:elevation="4dp"
+        android:background="@drawable/bg_rounded_calendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/current_month" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/eventDisplayRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/customBottomNavLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/square_day"
+        tools:listitem="@layout/list_item_event" />
+
+    <TextView
+        android:id="@+id/events_header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Events"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/square_day" />
+
+    <LinearLayout
+        android:id="@+id/customBottomNavLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/fade_white"
+        android:baselineAligned="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/home_section"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:paddingTop="4dp"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/home_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/solid_calendar"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/calendartextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/event_section"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:paddingTop="4dp"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="33dp"
+                android:layout_height="32dp"
+                android:src="@drawable/solid_search"
+                tools:ignore="ContentDescription" />
+            <TextView
+                android:id="@+id/searchTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/notification_section"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:paddingTop="4dp"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/notification_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/solid_notif"
+                tools:ignore="ContentDescription"/>
+            <TextView
+                android:id="@+id/notificationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Notification"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile_section"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:paddingTop="4dp"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/profile_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/solid_profile"
+                tools:ignore="ContentDescription"/>
+            <TextView
+                android:id="@+id/profileTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_section"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/add"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:elevation="6dp"
+        :layout_marginEnd="16dp"
+        android:layout_marginBottom="80dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

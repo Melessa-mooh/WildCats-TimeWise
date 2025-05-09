@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="0dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/login_identifier_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Student ID"
+        android:layout_marginBottom="3dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginTop="7dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/strokedrec">
+        <ImageView
+            android:id="@+id/login_identifier_icon"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:src="@drawable/studentid"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"/>
+        <EditText
+            android:id="@+id/login_identifierEditText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Student ID"
+            android:textColorHint="@color/dark_hint"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:background="@null"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Password"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginTop="7dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/strokedrec">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/key"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"/>
+        <EditText
+            android:id="@+id/login_passwordEditText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/password_label"
+            android:inputType="textPassword"
+            android:textColorHint="@color/dark_hint"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:background="@null"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
+        <ImageView
+            android:id="@+id/login_passwordToggle"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:src="@drawable/hide"
+            android:scaleType="centerInside"
+            android:padding="2dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Toggle password visibility"
+            android:layout_gravity="center"
+            android:layout_marginEnd="15dp"/>
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/login_loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/redtenradius"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="@string/log_in_button_text"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="or"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/crimson"
+        />
+
+    <ImageView
+        android:id="@+id/login_toggle_method_button"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:src="@drawable/gmail"
+        android:contentDescription="Switch login method"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="8dp"
+        android:paddingEnd="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_marginTop="4dp"/>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="crimson">#B80000</color>
+    <color name="gold">#FFC20E</color>
+    <color name="gray">#D3D3D3</color>
+    <color name="golden_yellow">#F4B728</color>
+    <color name="grey">#757575</color>c
+    <color name="holiday_highlight">#FFFACD</color>
+    <color name="fade_white">#FDFDFD</color>
+    <color name="crimson_red">#B80000</color>
+    <color name="light_yellow_highlight">#FFF3B0</color>
+    <color name="light_gray_background">#F5F5F5</color>
+    <color name="near_black_text">#212121</color>
+    <color name="medium_gray_text">#757575</color>
+    <color name="darkgray">#888888</color>
+    <color name="transparent">#00000000</color>
+    <color name="for_light_hint">#C7C7CC</color>
+    <color name="dark_hint"> #3A3A3A</color>
+    <color name="button_normal_color">#DC143C</color>
+    <color name="button_pressed_color">#A30F2D</color>
+
+
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".AuthActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_message"
+                android:textSize="30sp"
+                android:textColor="@color/crimson"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:id="@+id/loginregisterTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hi, you need to register to enter"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginBottom="25dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="25dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/login_toggle_button"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="85dp"
+                    android:layout_marginEnd="-185dp"
+                    android:layout_toStartOf="@id/center_guideline"
+                    android:background="@drawable/filledrec"
+                    android:clickable="true"
+                    android:elevation="@dimen/active_button_elevation"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/log_in_button_text"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/center_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5"/>
+
+
+                <TextView
+                    android:id="@+id/signup_toggle_button"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="163dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_toEndOf="@id/center_guideline"
+                    android:background="@drawable/filledrecpastel"
+                    android:clickable="true"
+                    android:elevation="@dimen/inactive_button_elevation"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/sign_up_button_text"
+                    android:textColor="@color/crimson"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+            </RelativeLayout>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

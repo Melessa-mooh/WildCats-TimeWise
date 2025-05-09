@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:fillViewport="true"
+    android:background="@drawable/white_stroke_rec">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/strokedrec"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:src="@android:drawable/ic_menu_search"
+            android:contentDescription="Search Icon"
+            app:tint="?android:attr/textColorHint"/>
+
+        <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="Search here"
+        android:inputType="text"
+        android:textColorHint="@color/darkgray"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:background="@null"
+        android:importantForAutofill="no" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>

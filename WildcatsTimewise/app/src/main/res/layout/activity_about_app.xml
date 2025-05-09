@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".AboutAppActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/aboutAppToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/crimson"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/white"
+        app:title="About App"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp">
+
+            <ImageView
+                android:id="@+id/appLogoImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="24dp"
+                android:contentDescription="App Logo"
+                app:srcCompat="@mipmap/ic_launcher_round"
+                />
+
+            <TextView
+                android:background="@drawable/white_solid"
+                android:id="@+id/aboutAppTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:lineSpacingMultiplier="1.2"
+                tools:text="Wildcats TimeWise is your essential companion for navigating academic life. Seamlessly manage your class schedule, keep track of important university events and holidays, and set timely reminders so you never miss a deadline or meeting. Stay organized, stay informed, and make the most of your time." />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

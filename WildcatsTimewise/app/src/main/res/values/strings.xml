@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">WildcatsTimeWise</string>
+
+    <string name="welcome_message">Welcome</string>
+    <string name="first_name_label">Chris Daniel</string>
+    <string name="last_name_label">Palacio</string>
+    <string name="student_id_label">23-4222-156</string>
+    <string name="gmail_label">chrisdanielcabatana@gmail.com</string>
+    <string name="password_label">Password</string>
+    <string name="confirm_password">Re-password</string>
+    <string name="sign_up_button_text">Sign Up</string>
+    <string name="log_in_button_text">Log In</string>
+    <string name="username_button_text">Email Address / Student ID</string>
+    <string name="logo_label">Wildcats Timewise</string>
+    <string name="invalid_date_fallback">Invalid Date</string>
+    <string name="search">Search</string>
+    <string-array name="event_types">
+        <item>Personal</item>
+        <item>Work</item>
+        <item>School</item>
+        <item>Appointment</item>
+        <item>Holiday Reminder</item>
+        <item>Birthday</item>
+    </string-array>
+
+</resources>

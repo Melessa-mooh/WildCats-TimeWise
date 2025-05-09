@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/calendar_day_labels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:weightSum="7">
+
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textAlignment="center" android:textColor="@color/black" android:text="S" android:textStyle="bold" tools:ignore="HardcodedText" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textAlignment="center" android:textColor="@color/black" android:text="M" android:textStyle="bold" tools:ignore="HardcodedText" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textAlignment="center" android:textColor="@color/black" android:text="T" android:textStyle="bold" tools:ignore="HardcodedText" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textAlignment="center" android:textColor="@color/black" android:text="W" android:textStyle="bold" tools:ignore="HardcodedText" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textAlignment="center" android:textColor="@color/black" android:text="T" android:textStyle="bold" tools:ignore="HardcodedText" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textAlignment="center" android:textColor="@color/black" android:text="F" android:textStyle="bold" tools:ignore="HardcodedText" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textAlignment="center" android:textColor="@color/black" android:text="S" android:textStyle="bold" tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/monthViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
